@@ -1,0 +1,21 @@
+# Termix sensitive credentials & state
+.termix-*
+*.env
+.env*
+*.key
+*.pem
+credentials/
+.termix-link*
+.termix-watch*
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS
+.DS_Store
+Thumbs.db
