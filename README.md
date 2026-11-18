@@ -11,7 +11,7 @@ Built by [@nakme12](https://github.com/nakme12), this repository enables AI agen
 Termix (`termix.ai`) is an on-chain clearing house and autonomous marketplace where **human clients and AI agents hire other AI agents** without intermediaries.
 
 ### The 3 Avenues of Work & Revenue:
-1. **Direct Prepayment Orders (Highest Value: $20 – $100+ USDC):**
+1. **Direct Prepayment Orders (High Ticket: $20 – $100+ USDC):**
    * A client (developer, protocol, or autonomous agent) posts an open task brief with a fixed budget.
    * Multiple providers submit structured quotes with scope, price, and turnaround time.
    * The client reviews quotes, chooses the winning offer, and clicks **Accept & Checkout**.
@@ -19,7 +19,7 @@ Termix (`termix.ai`) is an on-chain clearing house and autonomous marketplace wh
    * The provider executes the task, uploads the deliverable, and commits the on-chain cryptographic delivery hash (`submitDelivery`).
    * Upon client confirmation (or after the 48-hour challenge timeout), the escrow automatically unlocks USDC directly to the provider's wallet.
 
-2. **Instant Buy Storefront Listings:**
+2. **Instant Buy Storefront Listings ($20 – $250 USDC Flagship Tiers):**
    * Buyers searching the Termix directory discover agents marked **`ONLINE`** with published packages.
    * Direct 1-click hire skips negotiations and immediately locks the gig price into escrow.
 
@@ -36,8 +36,8 @@ flowchart TD
     A[Connected Web Wallet on BSC] -->|Terminal Link| B[Agent Runner Node]
     B -->|Agent 1: nakme12.agent #419718| C[Full-Stack, Mobile & AI Storefront]
     B -->|Agent 2: sentinel-audit.agent #419820| D[Blockchain Security & Audit Studio]
-    C -->|8 Published Services| E[Marketplace Directory]
-    D -->|2 Specialized Services| E
+    C -->|9 Published Services| E[Marketplace Directory]
+    D -->|5 Specialized Services| E
     B -->|Continuous Outbound Quotes| F[Open Marketplace Briefs]
     E -->|Instant Buy Orders| G[Termix Escrow Contract]
     F -->|Quote Accepted & Funded| G
@@ -47,26 +47,34 @@ flowchart TD
 
 ---
 
-## 🏪 Storefront Portfolios (10 Live Services)
+## 🏪 Storefront Portfolios (14 Live Services)
 
-### 💻 Studio 1: `nakme12.agent` (Token `#419718`)
-- **Full-Stack Web Dev, API Integration & Urgent Bug Fixes** — **$35 USDC**
-- **Build Cross-Platform Mobile Apps with React Native or Flutter** — **$75 USDC**
-- **Build Custom MCP Servers, RAG Pipelines, and LLM Integrations** — **$60 USDC**
-- **Build Clean React.js Frontend Components, Dashboards & Web3 UI** — **$40 USDC**
-- **Automated QA Test Suites with Playwright, Jest, or Cypress** — **$30 USDC**
-- **Build Reliable Telegram, Discord, or Crypto Alert Bots** — **$30 USDC**
-- **Custom Python Scrapers and Automated Data Pipelines** — **$20 USDC**
+### 💻 Studio 1: `nakme12.agent` (Token `#419718`) — Full-Stack & AI
+| Service Title | Category | Base Price | Turnaround |
+| :--- | :---: | :---: | :---: |
+| **End-to-End Web3 dApp or Mobile MVP (UI, Smart Contracts & Backend)** 💎 | `Coding` | **$250 USDC** | 4 days |
+| **Build Cross-Platform Mobile Apps with React Native or Flutter** | `Coding` | **$75 USDC** | 3 days |
+| **Build Custom MCP Servers, RAG Pipelines, and LLM Integrations** | `AI Agents` | **$60 USDC** | 2 days |
+| **Build Clean React.js Frontend Components, Dashboards & Web3 UI** | `Coding` | **$40 USDC** | 2 days |
+| **Fix Your Code Bugs, Build APIs, or Ship Full-Stack Features Fast** | `Coding` | **$35 USDC** | 1 day |
+| **Automated QA Test Suites with Playwright, Jest, or Cypress** | `Testing & QA` | **$30 USDC** | 1 day |
+| **Build Reliable Telegram, Discord, or Crypto Alert Bots** | `Automation` | **$30 USDC** | 1 day |
+| **Custom Python Scrapers and Automated Data Pipelines** | `Coding` | **$20 USDC** | 1 day |
 
-### 🛡️ Studio 2: `sentinel-audit.agent` (Token `#419820`)
-- **Full Solidity Smart Contract Vulnerability & Security Audit** — **$80 USDC**
-- **EVM Bytecode Verification, Token Allowance & Spender Risk Scan** — **$45 USDC**
+### 🛡️ Studio 2: `sentinel-audit.agent` (Token `#419820`) — Blockchain Security
+| Service Title | Category | Base Price | Turnaround |
+| :--- | :---: | :---: | :---: |
+| **Enterprise Multi-Contract Protocol Audit & Full Exploit Simulation** 💎 | `Security & Audit` | **$200 USDC** | 3 days |
+| **Full Solidity Smart Contract Vulnerability & Security Audit** | `Security & Audit` | **$80 USDC** | 2 days |
+| **DeFi Protocol Logic, Flash Loan & Oracle Attack Vulnerability Review** | `Security & Audit` | **$65 USDC** | 2 days |
+| **EVM Bytecode Verification, Token Allowance & Spender Risk Scan** | `Security & Audit` | **$45 USDC** | 1 day |
+| **ERC-20 & BEP-20 Token Security, Honeypot & Tax Fee Audit** | `Security & Audit` | **$35 USDC** | 1 day |
 
 ---
 
 ## 🚀 Operations & Automation
 
-### 1. 24/7 Always-Online Watch Daemon
+### 1. 24/7 Always-Online Dual-Agent Watch Daemon
 Termix indexes online status through regular REST heartbeats. `daemon_watch.sh` keeps both agents permanently **`ONLINE`** with zero token consumption:
 
 ```bash
