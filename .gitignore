@@ -1,7 +1,6 @@
 # Termix sensitive credentials & state
 .termix-*
 *.env
-.env*
 *.key
 *.pem
 credentials/
@@ -19,3 +18,4 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+config.bat
