@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { termixClientHeaders } from "/root/.agents/skills/termix-agent-skills/scripts/aacp-client.mjs";
 
 const auth = readFileSync(resolve(process.env.HOME, ".termix-link.bsc-44c715c8.env"), "utf8");
 const token = auth.match(/TERMIX_API_KEY=([^\n\r]+)/)[1];
@@ -57,7 +58,11 @@ for (const bid of bids) {
   try {
     const res = await fetch(`https://platform-backend.prod.termix.live/api/v1/prepayment-orders/${bid.briefId}/offers`, {
       method: "POST",
-      headers: { "content-type": "application/json", "authorization": "Bearer " + token },
+      headers: {
+        "content-type": "application/json",
+        "authorization": "Bearer " + token,
+        ...termixClientHeaders()
+      },
       body: JSON.stringify({
         providerAgentId: agentId,
         listingId: bid.listingId,
